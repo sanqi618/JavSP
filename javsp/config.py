@@ -115,6 +115,12 @@ class Crawler(BaseConfig):
     sleep_after_scraping: Duration
     use_javdb_cover: UseJavDBCover
     normalize_actress_name: bool
+    # JavDB 多域名列表，按优先级排列。访问失败时自动降级切换
+    javdb_domain_list: list[str] = [
+        'shturl.cc/api04DJ',
+        'shturl.cc/hRRaJKESGy',
+        'javdb.com',
+    ]
 
 class MovieDefault(BaseConfig):
     title: str

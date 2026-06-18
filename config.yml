@@ -30,8 +30,14 @@ network:
   proxy_free:
     avsox: 'https://avsox.click'
     javbus: 'https://www.seedmm.help'
-    javdb: 'https://javdb368.com'
+    javdb: 'https://javdb.com'
     javlib: 'https://www.y78k.com'
+  # JavDB 多域名列表。按优先级排列，访问失败时自动降级切换到下一个域名
+  # 可自行添加更多镜像域名，例如: ['shturl.cc/api04DJ', 'shturl.cc/hRRaJKESGy', 'javdb.com']
+  javdb_domain_list:
+    - 'shturl.cc/api04DJ'
+    - 'shturl.cc/hRRaJKESGy'
+    - 'javdb.com'
   # 网络问题导致抓取数据失败时的重试次数，通常3次就差不多了
   retry: 3
   # https://en.wikipedia.org/wiki/ISO_8601#Durations
